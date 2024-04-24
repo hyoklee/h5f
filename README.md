@@ -1,4 +1,4 @@
 # h5f
-h5 for file system
+HDF5 for file system
 
-See [Wiki](https://github.com/hyoklee/h5f/wiki) for documentation.
+See [Wiki](https://github.com/hyoklee/h5f/wiki).
