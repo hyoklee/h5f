@@ -11,3 +11,7 @@ jobs:
     steps:
     - name: cat
       run: cat /etc/fstab
+    - name: make
+      run: |
+        make
+        make test
