@@ -28,8 +28,10 @@ jobs:
       run: |
         sudo make test
     - name: dset 1K
+      run: |    
         cd build_generic/fs_test
         sudo ./lwext4-generic  -i ../../ext_images/ext4 --rw_size 1024 -c 1000
     - name: group 10K
+      run: |    
         cd build_generic/fs_test
         sudo ./lwext4-generic  -i ../../ext_images/ext4 -d 10000
