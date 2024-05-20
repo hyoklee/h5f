@@ -10,6 +10,6 @@ test:
 	time ./k
 	time ./k4
 clean:
-	rm -rf d g k *.o *.h5 a.out dir_* *.bin
+	rm -rf d g k k4 a.out *.o *.h5  *.bin dir_*
 
 

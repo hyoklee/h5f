@@ -20,7 +20,7 @@ int main(void) {
       printf("Error creating file\n");
       return -1;
     }
-    fwrite(data, 1024, 1, file_id);
+    fwrite(data, 4096, 1, file_id);
     fclose(file_id);    
   }
   return 0;
