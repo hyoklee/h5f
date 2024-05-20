@@ -11,8 +11,8 @@ jobs:
     steps:
     - name: apt
       run: |
-        sudo apt update
-        sudo apt install -y libfuse-dev
+        sudo apt update -q
+        sudo apt install -q -y libfuse-dev libhdf5-dev
     - name: cat
       run: cat /etc/fstab
     - name: checkout
