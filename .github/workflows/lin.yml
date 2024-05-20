@@ -9,6 +9,10 @@ jobs:
     name: lin
     runs-on: ubuntu-latest
     steps:
+    - name: apt
+      run: |
+        sudo apt update
+        sudo apt install -y libfuse3-dev
     - name: cat
       run: cat /etc/fstab
     - name: checkout
