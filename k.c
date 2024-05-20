@@ -20,7 +20,7 @@ int main(void) {
   }
 
   // Create a new HDF5 file
-  file_id = H5Fcreate("data.h5", H5F_ACC_TRUNC, H5P_DEFAULT, H5P_DEFAULT);
+  file_id = H5Fcreate("k.h5", H5F_ACC_TRUNC, H5P_DEFAULT, H5P_DEFAULT);
   if (file_id < 0) {
     printf("Error creating HDF5 file\n");
     return 1;
@@ -78,6 +78,6 @@ int main(void) {
   H5Sclose(filespace_id);
   H5Fclose(file_id);
 
-  printf("Data written successfully to %s\n", "data.h5");
+  printf("Data written successfully to %s\n", "k.h5");
   return 0;
 }
