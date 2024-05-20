@@ -28,4 +28,5 @@ jobs:
       run: |
         sudo make test
         cd build_generic/fs_test
-        sudo ./lwext4-generic  -i ../../ext_images/ext2 --rw_size 1024 -c 10000
+        sudo ./lwext4-generic  -i ../../ext_images/ext2 --rw_size 1024 -c 1000
+        sudo ./lwext4-generic  -i ../../ext_images/ext4 -d 10000
