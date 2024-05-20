@@ -1,0 +1,13 @@
+name: lin
+
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    name: lin
+    runs-on: ubuntu-latest
+    steps:
+    - name: cat
+      run: cat /etc/fstab
