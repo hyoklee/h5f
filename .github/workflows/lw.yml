@@ -24,3 +24,7 @@ jobs:
         cd build_generic
         make
         sudo make install
+    - name: test
+      run: |
+        cd build_generic
+        make test
