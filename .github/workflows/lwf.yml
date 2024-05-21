@@ -16,23 +16,9 @@ jobs:
     - name: checkout
       uses: actions/checkout@v4.1.1
       with:
-        repository: gkostka/lwext4
-    - name: checkout
-      uses: actions/checkout@v4.1.1
-      with:
         repository: ngkaho1234/fuse-lwext4
-        path: fuse-lwext4
-    - name: make
-      run: |
-        make generic
-        cd build_generic
-        make
-        sudo make install
-    - name: test
-      run: |
-        sudo make test
     - name: fuse
       run: |
-        cd fuse-lwext4
+        git submodule update      
         make
         make install
