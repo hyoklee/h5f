@@ -1,12 +1,12 @@
-name: lo
+name: lwf
 
 on:
   push:
     branches:
-      - main-
+      - main
 jobs:
   build:
-    name: lo
+    name: lwf
     runs-on: ubuntu-latest
     steps:
     - name: apt
@@ -17,6 +17,11 @@ jobs:
       uses: actions/checkout@v4.1.1
       with:
         repository: gkostka/lwext4
+    - name: checkout
+      uses: actions/checkout@v4.1.1
+      with:
+        repository: ngkaho1234/fuse-lwext4
+        path: fuse-lwext4
     - name: make
       run: |
         make generic
@@ -26,16 +31,8 @@ jobs:
     - name: test
       run: |
         sudo make test
-    - name: losetup
+    - name: fuse
       run: |
-        losetup -f
-        sudo losetup /dev/loop3 ext_images/ext4
-    - name: mount
-      run: |
-        sudo mkdir /mnt/lwext4
-        sudo mount /dev/loop3 /mnt/lwext4
-    - name: mkdir
-      run: |
-        ls /mnt/lwext4/
-        sudo mkdir /mnt/lwext4/d
-        ls /mnt/lwext4/
+        cd fuse-lwext4
+        make
+        make install
