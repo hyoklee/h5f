@@ -29,11 +29,11 @@ jobs:
     - name: losetup
       run: |
         losetup -f
-        losetup /dev/loop0 ../../ext_images/ext4
+        losetup /dev/loop3 ../../ext_images/ext4
     - name: mount
       run: |
         sudo mkdir /mnt/lwext4
-        sudo mount /dev/loop0 /mnt/lwext4
+        sudo mount /dev/loop3 /mnt/lwext4
     - name: mkdir
       run: |
         ls /mnt/lwext4/
