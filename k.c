@@ -70,6 +70,9 @@ int main(void) {
       H5Fclose(file_id);
       return 1;
     }
+    else {
+      H5Dflush(dataset_id);
+    }
   }
 
   // Close resources
