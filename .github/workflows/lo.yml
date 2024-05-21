@@ -28,9 +28,8 @@ jobs:
         sudo make test
     - name: losetup
       run: |
-        cd build_generic/fs_test
         losetup -f
-        sudo losetup /dev/loop3 ../../ext_images/ext4
+        sudo losetup /dev/loop3 ext_images/ext4
     - name: mount
       run: |
         sudo mkdir /mnt/lwext4
@@ -38,5 +37,5 @@ jobs:
     - name: mkdir
       run: |
         ls /mnt/lwext4/
-        mkdir /mnt/lwext4/d
+        sudo mkdir /mnt/lwext4/d
         ls /mnt/lwext4/
