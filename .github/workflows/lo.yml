@@ -1,0 +1,41 @@
+name: lo
+
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    name: lw
+    runs-on: ubuntu-latest
+    steps:
+    - name: apt
+      run: |
+        sudo apt update -q
+        sudo apt install -q -y libfuse-dev
+    - name: checkout
+      uses: actions/checkout@v4.1.1
+      with:
+        repository: gkostka/lwext4
+    - name: make
+      run: |
+        make generic
+        cd build_generic
+        make
+        sudo make install
+    - name: test
+      run: |
+        sudo make test
+    - name: losetup
+      run: |
+        losetup -f
+        losetup /dev/loop0 ../../ext_images/ext4
+    - name: mount
+      run: |
+        sudo mkdir /mnt/lwext4
+        sudo mount /dev/loop0 /mnt/lwext4
+    - name: mkdir
+      run: |
+        ls /mnt/lwext4/
+        mkdir /mnt/lwext4/d
+        ls /mnt/lwext4/
