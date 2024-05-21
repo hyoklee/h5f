@@ -6,7 +6,7 @@ on:
       - main
 jobs:
   build:
-    name: lw
+    name: lo
     runs-on: ubuntu-latest
     steps:
     - name: apt
