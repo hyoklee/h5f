@@ -17,10 +17,7 @@ jobs:
       uses: actions/checkout@v4.1.1
       with:
         repository: ngkaho1234/fuse-lwext4
-    - name: submoudle
-      run: |
-        cd lwext4
-        git submodule update
+        submodules: recursive
     - name: fuse
       run: |
         ls lwext4
