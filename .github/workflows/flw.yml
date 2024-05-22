@@ -12,7 +12,7 @@ jobs:
     - name: apt
       run: |
         sudo apt update -q
-        sudo apt install -q -y libfuse-dev libacl1-dev
+        sudo apt install -q -y libfuse-dev libacl1-dev p7zip-full
     - name: checkout
       uses: actions/checkout@v4.1.1
       with:
@@ -23,3 +23,7 @@ jobs:
         ls lwext4
         make
         make install
+    - name: test
+      run: |
+        cd lwext4
+        make test
