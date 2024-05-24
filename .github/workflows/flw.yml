@@ -3,7 +3,7 @@ name: flw
 on:
   push:
     branches:
-      - main
+      - main-
 jobs:
   build:
     name: flw
