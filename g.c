@@ -22,7 +22,7 @@ main (void)
     group_digit++;
     temp_num_group /= 10;
   }
-  
+  printf("malloc()\n");
   group_name = malloc((group_digit+1)+sizeof(GROUP_BASENAME));
   if (group_name == NULL) {
     printf("malloc() failed\n");
