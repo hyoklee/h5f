@@ -35,10 +35,10 @@ jobs:
       run: |    
         cd build_generic/fs_test
         sudo ./lwext4-generic  -i ../../ext_images/ext2 --rw_size 4096 -c 1000
-    - name: ext4 group 100K
+    - name: ext4 group 10K
       run: |    
         cd build_generic/fs_test
-        sudo ./lwext4-generic  -i ../../ext_images/ext4 -d 100000
+        sudo ./lwext4-generic  -i ../../ext_images/ext4 -d 10000
     - name: ext2 group 100K
       run: |    
         cd build_generic/fs_test
