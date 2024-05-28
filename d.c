@@ -7,7 +7,7 @@
 #define MAX_NAME_LEN 256   // Adjust if directory names need to be longer
 
 int main(int argc, char *argv[]) {
-    int num_dirs = 10000;  // Adjust the number of directories to create
+    int num_dirs = 64000;  // Adjust the number of directories to create
 
     // Check if the base directory exists (optional)
     struct stat st;
