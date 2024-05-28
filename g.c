@@ -14,8 +14,8 @@ main (void)
   hid_t fid = -1;
   hid_t* obj_id_list = NULL;
   int i = 0;
-  int num_group = 1000000;
-  int temp_num_group = 1000000;
+  int num_group = 100000;
+  int temp_num_group = 100000;
   int group_digit = 0;
   
   while(temp_num_group != 0) {
