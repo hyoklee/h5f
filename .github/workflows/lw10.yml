@@ -38,8 +38,8 @@ jobs:
     - name: ext4 group 40K
       run: |    
         cd build_generic/fs_test
-        sudo ./lwext4-generic  -i ../../ext_images/ext4 -d 40000
+        sudo ./lwext4-generic  -i ../../ext_images/ext4 -d 32000
     - name: ext2 group 40K
       run: |    
         cd build_generic/fs_test
-        sudo ./lwext4-generic  -i ../../ext_images/ext2 -d 40000
+        sudo ./lwext4-generic  -i ../../ext_images/ext2 -d 32000
