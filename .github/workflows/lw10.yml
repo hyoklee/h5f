@@ -1,0 +1,45 @@
+name: lw10
+
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    name: lw10
+    runs-on: ubuntu-latest
+    steps:
+    - name: apt
+      run: |
+        sudo apt update -q
+        sudo apt install -q -y libfuse-dev
+    - name: checkout
+      uses: actions/checkout@v4.1.6
+      with:
+        repository: gkostka/lwext4
+            
+    - name: make
+      run: |
+        make generic
+        cd build_generic
+        make
+        sudo make install
+    - name: test
+      run: |
+        sudo make test
+    - name: ext4 dset 1K
+      run: |    
+        cd build_generic/fs_test
+        sudo ./lwext4-generic  -i ../../ext_images/ext4 --rw_size 4096 -c 1000
+    - name: ext2 dset 1K
+      run: |    
+        cd build_generic/fs_test
+        sudo ./lwext4-generic  -i ../../ext_images/ext2 --rw_size 4096 -c 1000
+    - name: ext4 group 100K
+      run: |    
+        cd build_generic/fs_test
+        sudo ./lwext4-generic  -i ../../ext_images/ext4 -d 100000
+    - name: ext2 group 100K
+      run: |    
+        cd build_generic/fs_test
+        sudo ./lwext4-generic  -i ../../ext_images/ext2 -d 100000
