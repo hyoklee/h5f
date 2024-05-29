@@ -3,7 +3,7 @@ name: lw10
 on:
   push:
     branches:
-      - main
+      - main-
 jobs:
   build:
     name: lw10

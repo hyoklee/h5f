@@ -1,5 +1,5 @@
 #define H5FILE_NAME        "g.h5"
-#define GROUP_BASENAME "/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+#define GROUP_BASENAME "/dir_"
 
 #include "hdf5.h"
 #include <assert.h>
@@ -14,8 +14,8 @@ main (void)
   hid_t fid = -1;
   hid_t* obj_id_list = NULL;
   int i = 0;
-  int num_group = 100000;
-  int temp_num_group = 100000;
+  int num_group = 32754;
+  int temp_num_group = 32754;
   int group_digit = 0;
   
   while(temp_num_group != 0) {
