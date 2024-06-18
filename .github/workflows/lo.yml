@@ -14,7 +14,7 @@ jobs:
         sudo apt update -q
         sudo apt install -q -y libfuse-dev
     - name: checkout
-      uses: actions/checkout@v4.1.6
+      uses: actions/checkout@v4.1.7
       with:
         repository: gkostka/lwext4
     - name: make
