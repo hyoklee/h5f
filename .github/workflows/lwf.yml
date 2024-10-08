@@ -14,11 +14,11 @@ jobs:
         sudo apt update -q
         sudo apt install -q -y libfuse-dev
     - name: checkout
-      uses: actions/checkout@v4.2.0
+      uses: actions/checkout@v4.2.1
       with:
         repository: ngkaho1234/fuse-lwext4
     - name: checkout
-      uses: actions/checkout@v4.2.0
+      uses: actions/checkout@v4.2.1
       with:
         repository: gkostka/lwext4
         path: lwext4
