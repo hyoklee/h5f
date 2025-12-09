@@ -14,7 +14,7 @@ jobs:
         sudo apt update -q
         sudo apt install -q -y libfuse-dev libacl1-dev p7zip-full
     - name: checkout
-      uses: actions/checkout@v6.0.0
+      uses: actions/checkout@v6.0.1
       with:
         repository: ngkaho1234/fuse-lwext4
         submodules: recursive
