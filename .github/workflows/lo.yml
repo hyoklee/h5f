@@ -1,4 +1,6 @@
 name: lo
+permissions:
+  contents: read
 
 on:
   push:
