@@ -1,4 +1,6 @@
 name: lw
+permissions:
+  contents: read
 
 on:
   push:
