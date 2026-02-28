@@ -8,6 +8,8 @@ jobs:
   build:
     name: lin
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
     - name: apt
       run: |
