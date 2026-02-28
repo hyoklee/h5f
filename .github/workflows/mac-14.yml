@@ -8,6 +8,8 @@ jobs:
   build:
     name: mac-14
     runs-on: macos-14
+    permissions:
+      contents: read
     steps:
     - name: brew
       run: brew install macfuse
