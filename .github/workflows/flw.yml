@@ -1,4 +1,6 @@
 name: flw
+permissions:
+  contents: read
 
 on:
   push:
