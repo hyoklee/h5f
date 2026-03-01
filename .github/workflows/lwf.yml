@@ -1,4 +1,6 @@
 name: lwf
+permissions:
+  contents: read
 
 on:
   push:
