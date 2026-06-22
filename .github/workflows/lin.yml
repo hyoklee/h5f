@@ -18,7 +18,7 @@ jobs:
     - name: cat
       run: cat /etc/fstab
     - name: checkout
-      uses: actions/checkout@v6.0.2
+      uses: actions/checkout@v7.0.0
     - name: make
       run: |
         make
